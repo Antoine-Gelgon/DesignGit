@@ -10,4 +10,4 @@ This version is developped for [BoxonGit](http://boxon.info). To use you own git
 
 License
 =======
-DesignGit is under the [GNU/GPL V3](https://www.gnu.org/licenses/gpl-3.0.txt) license.
+DesignGit is under the [GNU/GPL V2](https://www.gnu.org/licenses/gpl-2.0.txt) license.
