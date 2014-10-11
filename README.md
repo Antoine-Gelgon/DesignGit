@@ -1,7 +1,7 @@
 DesignGit
 =========
 
-Design adapted web Git interface usign [php-github-api](https://github.com/KnpLabs/php-github-api).
+Design adapted Git web interface usign [php-github-api](https://github.com/KnpLabs/php-github-api).
 
 Usage
 =====
