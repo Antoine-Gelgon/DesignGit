@@ -6,11 +6,12 @@
     <link href="styles/style.css" rel="stylesheet" type="text/css" media="print, screen" />
     <script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
     <script type="text/javascript" src="js/tree.js"></script>
+    <script type="text/javascript" src="js/masonry.js"></script>
   </head>
   <body>
     <div class="description">
       <h1> BoxonGit </h1>
-      This is BoxonGit, a list of design works as Git repositories. All of these works are under a <a href="https://en.wikipedia.org/wiki/Copyleft" target="_blank"> Copyleft license</a>, feel free to use, study, modify and redistribute them as long as the license terms are respected.
+      This is BoxonGit, a list of design works as <a href="https://en.wikipedia.org/wiki/Git_%28software%29">Git repositories</a>. All of these works are under a <a href="https://en.wikipedia.org/wiki/Copyleft"> Copyleft license</a>, feel free to use, study, modify and redistribute them.
     </div><br/>
     <?php
 
@@ -35,6 +36,11 @@
     );
 
     $client = new \Github\Client($client);
+
+    # Authentication is needed in order to increase rate limit.
+    # See https://developer.github.com/v3/#rate-limiting
+    $authKey = 'paste here your key';
+    $client->authenticate($authKey, null, Github\Client::AUTH_URL_TOKEN);
 
     include ('templates/allRepos.php');
 
