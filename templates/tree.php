@@ -24,7 +24,7 @@
       if((preg_match("/\.(jpe?g|png|gif)$/i", $image)) && ($fileSize < 2600000)){
         echo '<img class="preview indent" src=" '.$image.' " />';
       } else {
-        echo '<p class="indent error">No preview availaible.</p>';
+        echo '<span class="indent error">No preview availaible.</span>';
       }
     }
 
@@ -40,8 +40,6 @@
             }
           echo '</select><input type="submit" value="See file" title="See file" /></form>';
         echo '</div>';
-      } else {
-        echo 'No older version available.';
       }
     }
 

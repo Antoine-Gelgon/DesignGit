@@ -2,12 +2,22 @@
 
 body{
   font-family: monospace;
+  margin: 20px;
+  line-height: 1.7em;
 }
-.commits{
-  position: absolute;
-  right: 20px;
-  top: 0px;
-  width: 200px;
+
+.repoHead{
+  width: 100%;  
+}
+
+.repoRight{
+  float: right;
+  width: 24%;
+}
+
+.repoLeft{
+  width: 74%;
+  float: left;
 }
 
 .indent{
@@ -43,4 +53,64 @@ body{
   margin-bottom: 15px;
   padding-bottom: 15px;
   border-bottom: 1px solid black;
+}
+
+a{
+  text-decoration: none;
+  color: black;
+  border: 1px solid black;
+  padding: 2px 4px;
+}
+
+a:hover{
+  font-weight: bold;
+  border-width: 2px;
+  padding: 2px 3px
+}
+
+.userRepos{
+  width: 25%;
+  float: left;
+}
+
+.repo{
+	border: 2px solid black;
+	padding:8px;
+	margin-bottom: 8px;
+}
+
+.title{
+  font-weight: bold;
+}
+
+.details{
+  width: 70%;
+  float: left;
+  margin-left: 16px;
+}
+
+.readMe{
+  margin-top: 40px;
+}
+
+.readMe pre code{
+  word-wrap: break-word;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  -o-hyphens: auto;
+  hyphens: auto;
+}
+.readMe img, .commit img{
+  width: 80%;
+  margin-left: 10%;
+}
+
+.readMe h1:first-child{
+  display:none;
+}
+
+.commit{
+  border-bottom: 1px solid black;
+  padding: 4px 0px;
 }

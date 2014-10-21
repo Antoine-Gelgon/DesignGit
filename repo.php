@@ -18,16 +18,21 @@
   $description = $repo['description'];
   $clone_url = $repo ['clone_url'];
 
-  echo '<div class="repo">';
-    echo '<h1>'.$name.' <sup><a class="download" href="https://github.com/' .$owner. '/' .$name. '/archive/master.zip">Download</a></sup></h1>';
-    echo '<h2>by <a href="'.$ownerUrl.'">'.$owner.'</a></h2>';
-    echo '<p>'.$description.'</p>';
-
-    include ('templates/tree.php');
-    include ('templates/readme.php');
-    include ('templates/commits.php');
-    include ('templates/issues.php');
-    include ('templates/userRepo.php');
+  echo '<div class="repo details">';
+    echo '<div class="repoHead"';
+      echo '<h1>'.$name.' <sup><a class="download" href="https://github.com/' .$owner. '/' .$name. '/archive/master.zip">Download</a></sup></h1>';
+      echo '<h2>by <a href="'.$ownerUrl.'">'.$owner.'</a></h2>';
+      echo '<p>'.$description.'</p>';
     echo '</div>';
+    echo '<div class="repoLeft">';
+      include ('templates/tree.php');
+      include ('templates/readme.php');
+    echo '</div>';
+    echo '<div class="repoRight">';
+      include ('templates/commits.php');
+      include ('templates/issues.php');
+      include ('templates/userRepo.php');
+    echo '</div>';
+  echo '</div>';
 
 ?>

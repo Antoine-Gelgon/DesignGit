@@ -20,21 +20,32 @@
 
     sort_by_name($allRepos, 'name');
 
-    echo '<div class="userRepos">';
+    # Exclude specifics repos
+    # print_r ($allRepos);    # Print the whole array and search for the specific key number
+      unset($allRepos[0]);    # --8239-
+      unset($allRepos[16]);   # Boxon
+
+?>
+
+  <div class="userRepos">
+
+<?php
+
       foreach ($allRepos as $repo){
 
-        $name = $repo['name'];
-        $owner = $repo['owner']['login'];
+        $repoName = $repo['name'];
+        $repoOwner = $repo['owner']['login'];
         $description = $repo['description'];
         $cloneUrl = $repo['clone_url'];
 
         echo '<div class="repo">';
-          echo '<a href="repo.php?repoName=' .$name. '&repoOwner=' .$owner. '">' .$name. '</a>';
-          echo ' by ' .$owner;
-          echo '<div class="description">' .$description. '</div>';
-          echo '<a class="download" href="https://github.com/' .$owner. '/' .$name. '/archive/master.zip">Download</a>';
-          echo '<div class="cloneUrl">Clone url: ' .$cloneUrl. '</div>';
-        echo '</div><br/>';
+          echo '<a class="title" href="repo.php?repoName=' .$repoName. '&repoOwner=' .$repoOwner. '"><span>' .$repoName. '</span></a>';
+          echo ' <span>by ' .$repoOwner. '</span>';
+          echo ' <div class="description">' .$description. '</div>';
+          /*include ('readme.php');*/
+          echo '<a class="download" href="https://github.com/' .$repoOwner. '/' .$repoName. '/archive/master.zip">Download</a>';
+          echo '<a class="cloneUrl" href="' .$cloneUrl. '">Clone url</a>';
+        echo '</div>';
       }
     echo '</div>';
   }
