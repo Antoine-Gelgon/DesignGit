@@ -12,4 +12,4 @@ In order to increase the [rate limit](https://developer.github.com/v3/#rate-limi
 
 License
 =======
-DesignGit is under the [GNU/GPL V2](https://www.gnu.org/licenses/gpl-2.0.txt) license.
+DesignGit is under the [GNU/GPL V2](https://www.gnu.org/licenses/gpl-2.0.txt) license!
